@@ -1,0 +1,401 @@
+/* DepEd Quezon Green Color Palette */
+:root {
+  --primary-green: #2E7D32;        /* Main green */
+  --light-green: #4CAF50;          /* Light green */
+  --accent-green: #66BB6A;         /* Accent green */
+  --dark-green: #1B5E20;           /* Dark green */
+  --background-green: #F1F8E9;     /* Very light green background */
+  --text-green: #2E7D32;           /* Text green */
+  --gradient-start: #2E7D32;       /* Gradient start */
+  --gradient-end: #66BB6A;         /* Gradient end */
+  --contrast-orange: #2E7D32;      /* Contrast orange for buttons */
+  --contrast-blue: #2E7D32;        /* Contrast blue for accents */
+}
+
+/* Reset and width fixes */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Mobile-first responsive styles */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+}
+
+/* Container width fixes */
+.container,
+.container-fluid {
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+/* Enhanced mobile-specific improvements */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem 1rem !important;
+    min-height: auto !important;
+  }
+  
+  .hero-section h1 {
+    font-size: 1.75rem !important;
+  }
+  
+  .hero-section .display-4 {
+    font-size: 1.5rem !important;
+  }
+  
+  .hero-section .lead {
+    font-size: 1rem !important;
+  }
+  
+  .hero-section .fa-school {
+    font-size: 2.5rem !important;
+  }
+  
+  .location-card {
+    margin-bottom: 1rem;
+  }
+  
+  .chat-interface {
+    height: 400px !important;
+  }
+  
+  .directions-form {
+    padding: 1rem !important;
+  }
+  
+  .btn-lg {
+    padding: 0.75rem 1.5rem !important;
+    font-size: 1rem !important;
+  }
+  
+  .input-group-lg input {
+    font-size: 1rem !important;
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-section {
+    padding: 3rem 2rem !important;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.25rem !important;
+  }
+  
+  .location-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .location-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(46, 125, 50, 0.15);
+  }
+}
+
+/* Desktop optimizations */
+@media (min-width: 1025px) {
+  .hero-section {
+    padding: 4rem 0 !important;
+    min-height: 500px !important;
+  }
+  
+  .hero-section h1 {
+    font-size: 3rem !important;
+  }
+  
+  .hero-section .fa-school {
+    font-size: 5rem !important;
+  }
+  
+  .location-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .location-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(46, 125, 50, 0.2);
+  }
+}
+
+/* Touch-friendly improvements */
+.location-card {
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 10px rgba(46, 125, 50, 0.08);
+  transition: all 0.3s ease;
+}
+
+.btn {
+  min-height: 44px; /* iOS touch target minimum */
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.form-control {
+  min-height: 44px; /* iOS touch target minimum */
+  border-radius: 8px;
+}
+
+/* Chat improvements for mobile */
+.chat-messages {
+  max-height: 300px;
+}
+
+.message {
+  font-size: 0.9rem;
+}
+
+/* Navigation mobile improvements */
+.navbar-brand {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link {
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: rgba(46, 125, 50, 0.1);
+}
+
+/* Card improvements with green theme */
+.card {
+  border: none;
+  box-shadow: 0 2px 10px rgba(46, 125, 50, 0.08);
+  transition: all 0.3s ease;
+  border-radius: 12px;
+}
+
+.card:hover {
+  box-shadow: 0 4px 20px rgba(46, 125, 50, 0.12);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Loading states */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Mobile navigation improvements */
+@media (max-width: 576px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  
+  .navbar-nav .nav-link {
+    border-bottom: 1px solid rgba(46, 125, 50, 0.1);
+    margin: 0.25rem 0;
+  }
+  
+  .navbar-nav .nav-link:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Touch feedback */
+.btn:active {
+  transform: scale(0.98);
+}
+
+.location-card:active {
+  transform: translateY(-1px);
+}
+
+/* Improved focus states for accessibility */
+.btn:focus,
+.form-control:focus {
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.25);
+  border-color: var(--primary-green);
+}
+
+/* Mobile-specific animations */
+@media (hover: none) {
+  .location-card:hover {
+    transform: none;
+  }
+  
+  .location-card:active {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(46, 125, 50, 0.15);
+  }
+}
+
+/* Enhanced button styles with better contrast */
+.btn-primary {
+  background-color: var(--primary-green);
+  border-color: var(--primary-green);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--dark-green);
+  border-color: var(--dark-green);
+  color: white;
+}
+
+.btn-success {
+  background-color: var(--contrast-orange);
+  border-color: var(--contrast-orange);
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #E55A2B;
+  border-color: #E55A2B;
+  color: white;
+}
+
+/* Form control improvements */
+.form-control:focus {
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 0.2rem rgba(46, 125, 50, 0.25);
+}
+
+/* Badge improvements */
+.badge.bg-primary {
+  background-color: var(--primary-green) !important;
+}
+
+.badge.bg-success {
+  background-color: var(--light-green) !important;
+}
+
+/* Alert improvements */
+.alert-success {
+  background-color: var(--background-green);
+  border-color: var(--light-green);
+  color: var(--dark-green);
+}
+
+/* Responsive typography */
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+  }
+  
+  h3 {
+    font-size: 1.1rem;
+  }
+  
+  .lead {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 993px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.75rem;
+  }
+}
