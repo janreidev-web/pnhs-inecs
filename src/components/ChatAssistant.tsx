@@ -1,5 +1,6 @@
 import React, { useState} from 'react';
-import { Container, Row, Col, Card, Form, Button, Dropdown } from 'react-bootstrap';
+import { Container, Row, Col, Card, Form, Dropdown } from 'react-bootstrap';
+import { Button } from './ui/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComments, faPaperPlane, faSpinner, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { useChatBot } from '../hooks/useChatBot';
@@ -119,7 +120,6 @@ const ChatAssistant: React.FC = () => {
                       disabled={isTyping}
                       className="border-0 shadow-sm chat-input"
                     />
-                    {/* @ts-expect-error - TypeScript union type complexity with react-bootstrap Button and React 19 */}
                     <Button 
                       type="submit" 
                       variant="primary"

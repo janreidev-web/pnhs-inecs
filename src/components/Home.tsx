@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Button } from './ui/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSchool, faSearch, faComments, faRoute, faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons';
 import { useChatBot } from '../hooks/useChatBot';
@@ -200,7 +201,6 @@ const Home: React.FC = () => {
                 Ask questions about locations, directions, and facilities with our AI-powered assistant
               </Card.Text>
               <div className="mt-auto">
-                {/* @ts-ignore - TypeScript union type complexity with react-bootstrap Button and React 19 */}
                 <Button 
                   variant="primary"
                   onClick={handleChatScroll}
