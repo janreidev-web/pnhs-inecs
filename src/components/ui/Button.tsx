@@ -2,9 +2,10 @@ import React from 'react';
 import { Button as BootstrapButton } from 'react-bootstrap';
 import type { ButtonProps as BootstrapButtonProps } from 'react-bootstrap';
 
-// Type-safe wrapper for React Bootstrap Button to avoid TypeScript union type complexity with React 19
-// This wrapper simplifies the complex union types that React 19 creates with react-bootstrap
-export type ButtonProps = BootstrapButtonProps;
+// Simplified ButtonProps to avoid TypeScript union type complexity with React 19
+export type ButtonProps = Omit<BootstrapButtonProps, 'as'> & {
+  as?: keyof React.JSX.IntrinsicElements;
+};
 
 // Use function declaration to avoid complex type inference issues
 export function Button(props: ButtonProps): React.ReactElement {
