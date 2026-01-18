@@ -8,6 +8,7 @@ import ChatAssistant from './components/ChatAssistant';
 import Directions from './components/Directions';
 import Locations from './components/Locations';
 import Footer from './components/Footer';
+import SchoolMap3D from './components/SchoolMap3D';
 
 function App() {
   useEffect(() => {
@@ -42,6 +43,33 @@ function App() {
       <Navigation />
       <main>
         <Home />
+        <section id="3d-map" style={{ 
+          padding: '80px 0',
+          background: 'linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%)'
+        }}>
+          <div className="container">
+            <div className="text-center mb-5">
+              <h2 style={{ 
+                fontSize: '2.5rem', 
+                fontWeight: '700', 
+                color: '#1B5E20',
+                marginBottom: '1rem'
+              }}>
+                3D Campus Map
+              </h2>
+              <p style={{ 
+                fontSize: '1.2rem', 
+                color: '#666',
+                maxWidth: '600px',
+                margin: '0 auto'
+              }}>
+                Explore Pagbilao National High School in interactive 3D. 
+                Rotate, zoom, and pan to discover every corner of our campus.
+              </p>
+            </div>
+            <SchoolMap3D height="600px" showControls={true} />
+          </div>
+        </section>
         <ChatAssistant />
         <Directions />
         <Locations />

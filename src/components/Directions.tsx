@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Card, Form, Button, Alert, Spinner, Badge } from 'react-bootstrap';
+import { Container, Row, Col, Card, Form, Button, Alert, Spinner } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRoute, faClock, faWalking, faExclamationTriangle, faMapMarkerAlt, faLocationArrow, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { useDirections } from '../hooks/useDirections';
@@ -18,9 +18,7 @@ const Directions: React.FC = () => {
     getDirections
   } = useDirections();
 
-  const [currentLocation, setCurrentLocation] = useState<{ lat: number; lng: number } | null>(null);
   const [locationError, setLocationError] = useState<string>('');
-  const [showMap, setShowMap] = useState(true); // Show map by default
 
   // Set default destination to PNHS
   React.useEffect(() => {
@@ -35,17 +33,15 @@ const Directions: React.FC = () => {
     e.preventDefault();
     if (from.trim() && to.trim()) {
       getDirections(from.trim(), to.trim());
-      setShowMap(true);
     }
   };
 
   const handleUseCurrentLocation = async () => {
     try {
-      const location = await googleMapsService.getCurrentLocation();
-      setCurrentLocation(location);
+      await googleMapsService.getCurrentLocation();
       setFrom('My Current Location');
       setLocationError('');
-    } catch (error) {
+    } catch {
       setLocationError('Unable to get your current location. Please enable location services.');
     }
   };

@@ -59,7 +59,7 @@ export const useDirections = () => {
         const fallbackResponse = `🗺️ **Google Maps Navigation**\n\n📍 **From:** ${fromLocation}\n🎯 **To:** ${toLocation}\n\n📱 **Get directions:**\n[Open in Google Maps](${directionsUrl})\n\n💡 **Google Maps will provide the best route with real-time traffic and turn-by-turn directions!`;
         setDirections(fallbackResponse);
       }
-    } catch (err) {
+    } catch {
       setError('An error occurred while getting directions. Please try again.');
     } finally {
       setIsLoading(false);

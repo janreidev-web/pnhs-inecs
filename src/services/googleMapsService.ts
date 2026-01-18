@@ -1,7 +1,14 @@
 // Google Maps Service for real-time directions
 declare global {
   interface Window {
-    google: any;
+    google: {
+      maps: {
+        Map: unknown;
+        DirectionsService: unknown;
+        DirectionsRenderer: unknown;
+        Geocoder: unknown;
+      };
+    };
   }
 }
 
